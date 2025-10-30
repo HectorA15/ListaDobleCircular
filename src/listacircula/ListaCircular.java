@@ -26,12 +26,17 @@ public class ListaCircular {
     public void insertarAlFrente(Cancion c) {
         Nodo nuevo = new Nodo(c);
         if (estaVacia()) {
-            nuevo.siguiente = nuevo;
+            nuevo.siguiente = nuevo; 
             nuevo.anterior = nuevo;
             frente = nuevo;
             ultimo = nuevo;
         } else {
-            frente.setSiguiente(nuevo);
+                                                            // nuevo.setSiguiente(frente);
+                                                             // frente.setAnterior(nuevo);          // mi modificacion
+                                                                      //frente = nuevo;
+                                                                  // nuevo.setAnterior(ultimo);
+                                                                //  ultimo.setSiguiente(nuevo);
+            frente.setSiguiente(nuevo);                           
             nuevo.setSiguiente(frente);
             frente = nuevo;
             frente.setAnterior(ultimo);
